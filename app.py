@@ -13,7 +13,7 @@ df = df.sort_values("Date")
 
 # Initialize app
 app = dash.Dash(__name__)
-
+server = app.server 
 
 # Layout
 app.layout = html.Div(
@@ -171,4 +171,4 @@ def update_dashboard(region):
 
 # RUN APP
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False,use_reloader=False)
